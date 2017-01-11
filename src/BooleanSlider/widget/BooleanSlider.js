@@ -37,8 +37,8 @@ define([
         _contextObj: null,
         _alertDiv: null,
 
-        _trueNode: null,
-        _falseNode: null,
+        // _trueNode: null,
+        // _falseNode: null,
 
         constructor: function () {
             this._handles = [];
@@ -47,8 +47,8 @@ define([
         postCreate: function () {
             logger.debug(this.id + ".postCreate");
             this._setupEvents();
-            this._trueNode = this.trueNode;
-            this._falseNode = this.falseNode;
+            // this._trueNode = this.trueNode;
+            // this._falseNode = this.falseNode;
         },
 
         update: function (obj, callback) {
@@ -62,6 +62,9 @@ define([
             logger.debug(this.id + "._setupEvents");
             this.connect(this.controlNode, "click", function (e) {
                 // save the data
+                if (this.editable){
+                    this.inputNode.checked = !this.inputNode.checked
+                }
                 this._contextObj.set(this.dataAttr, this.inputNode.checked);
 
                 if (this.onChangeMF) {
@@ -88,8 +91,8 @@ define([
             if (this._contextObj !== null) {
                 dojoStyle.set(this.domNode, "display", "block");
 
-                dojoProp.set(this._trueNode, "textContent", this.trueValue);
-                dojoProp.set(this._falseNode, "textContent", this.falseValue);
+                // dojoProp.set(this._trueNode, "textContent", this.trueValue);
+                // dojoProp.set(this._falseNode, "textContent", this.falseValue);
 
                 this._loadData(callback);
             } else {
@@ -109,12 +112,12 @@ define([
             if (this.inputNode) {
                 if (checked !== null && checked) {
                     this.inputNode.checked = true;
-                    dojoClass.add(this.controlNode, "btn-primary");
-                    dojoClass.remove(this.controlNode, "btn-default");
+                    // dojoClass.add(this.controlNode, "btn-primary");
+                    // dojoClass.remove(this.controlNode, "btn-default");
                 } else {
                     this.inputNode.checked = false;
-                    dojoClass.remove(this.controlNode, "btn-primary");
-                    dojoClass.add(this.controlNode, "btn-default");
+                    // dojoClass.remove(this.controlNode, "btn-primary");
+                    // dojoClass.add(this.controlNode, "btn-default");
                 }
 
                 if (!this.editable || this.readOnly || this._contextObj.isReadonlyAttr(this.dataAttr)) {

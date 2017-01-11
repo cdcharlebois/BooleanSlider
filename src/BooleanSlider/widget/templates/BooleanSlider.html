@@ -1,9 +1,19 @@
 <div class="wgt-BooleanSlider">
-    <div class="wgt-BooleanSlider_control form-control btn" data-dojo-attach-point="controlNode">
-        <input type="checkbox" class="wgt-BooleanSlider__input" data-dojo-attach-point="inputNode" checked />
-        <div class="wgt-BooleanSlider__toggle">
+    <!-- <div class="wgt-BooleanSlider_control form-control" data-dojo-attach-point="controlNode"> -->
+        <!-- <input type="checkbox" class="wgt-BooleanSlider__input" data-dojo-attach-point="inputNode" checked /> -->
+        <!-- <div class="wgt-BooleanSlider__toggle">
             <span class="wgt-BooleanSlider__toggletrue" data-dojo-attach-point="trueNode">Yes</span>
             <span class="wgt-BooleanSlider__togglefalse" data-dojo-attach-point="falseNode">No</span>
-        </div>
-    </div>
+        </div> -->
+        <!-- Rounded switch -->
+        <!-- <label class="switch" data-dojo-attach-point="controlNode">
+          <input type="checkbox" data-dojo-attach-point="inputNode">
+          <div class="slider round"></div>
+        </label> -->
+    <!-- </div> -->
+    <label class="wrapper" data-dojo-attach-point="controlNode">
+      <input type="checkbox" name="checkbox1" class="ios-toggle checkbox" data-dojo-attach-point="inputNode"/>
+      <label for="checkbox1" class="checkbox-label" data-off="off" data-on="on"></label>
+    </label>
+
 </div>
