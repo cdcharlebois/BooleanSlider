@@ -22,6 +22,7 @@ define([
         // DOM elements
         controlNode: null,
         inputNode: null,
+        labelNode: null,
         trueNode: null,
         falseNode: null,
 
@@ -31,6 +32,7 @@ define([
         trueValue: "",
         falseValue: "",
         editable: true,
+        displayType: 'android',
 
         // Internal variables.
         _handles: null,
@@ -90,6 +92,19 @@ define([
             logger.debug(this.id + "._updateRendering");
             if (this._contextObj !== null) {
                 dojoStyle.set(this.domNode, "display", "block");
+                //TODO: Add the classes based on this.displayType
+                if (this.displayType === 'android'){
+                  // android
+                  dojoClass.add(this.labelNode, 'android')
+                  dojoClass.add(this.inputNode, 'android')
+                  dojoClass.add(this.controlNode, 'android')
+                }
+                else {
+                  //ios
+                  dojoClass.add(this.labelNode, 'ios')
+                  dojoClass.add(this.inputNode, 'ios')
+                  dojoClass.add(this.controlNode, 'ios')
+                }
 
                 // dojoProp.set(this._trueNode, "textContent", this.trueValue);
                 // dojoProp.set(this._falseNode, "textContent", this.falseValue);

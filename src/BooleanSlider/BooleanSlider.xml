@@ -20,6 +20,16 @@
             <description>Microflow to trigger when button is toggled</description>
             <returnType type="Void" />
         </property>
+        <property key="displayType" type="enumeration" required="true" defaultValue="android">
+            <caption>Display As</caption>
+            <category>Customization</category>
+            <description>Render switch as</description>
+            <enumerationValues>
+                <enumerationValue key="android">Android</enumerationValue>
+                <enumerationValue key="ios">iOS</enumerationValue>
+                <!-- <enumerationValue key="auto">auto</enumerationValue> -->
+            </enumerationValues>
+        </property>
         <property key="trueValue" type="translatableString">
             <caption>String value for True</caption>
             <category>Customization</category>
@@ -43,4 +53,3 @@
         </property>
     </properties>
 </widget>
-
