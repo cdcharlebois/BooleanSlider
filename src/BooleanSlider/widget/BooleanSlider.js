@@ -65,7 +65,7 @@ define([
             this.connect(this.controlNode, "click", function (e) {
                 // save the data
                 if (this.editable){
-                    this.inputNode.checked = !this.inputNode.checked
+                    this.inputNode.checked = !this.inputNode.checked;
                 }
                 this._contextObj.set(this.dataAttr, this.inputNode.checked);
 
@@ -81,7 +81,7 @@ define([
                         },
                         callback: function () {}, // stub function
                         error: dojoLang.hitch(this, function (error) {
-                            console.log(this.id + ": An error occurred while executing microflow: " + error.description);
+                            // console.log(this.id + ": An error occurred while executing microflow: " + error.description);
                         })
                     }, this);
                 }
@@ -95,23 +95,23 @@ define([
                 //TODO: Add the classes based on this.displayType
                 if (this.displayType === 'auto'){
                   if (device.platform.toLowerCase() === 'android') {
-                    this.displayType = 'android'
+                    this.displayType = 'android';
                   }
                   else {
-                    this.displayType = 'ios'
+                    this.displayType = 'ios';
                   }
                 }
                 if (this.displayType === 'android'){
                   // android
-                  dojoClass.add(this.labelNode, 'android')
-                  dojoClass.add(this.inputNode, 'android')
-                  dojoClass.add(this.controlNode, 'android')
+                  dojoClass.add(this.labelNode, 'android');
+                  dojoClass.add(this.inputNode, 'android');
+                  dojoClass.add(this.controlNode, 'android');
                 }
                 else {
                   //ios
-                  dojoClass.add(this.labelNode, 'ios')
-                  dojoClass.add(this.inputNode, 'ios')
-                  dojoClass.add(this.controlNode, 'ios')
+                  dojoClass.add(this.labelNode, 'ios');
+                  dojoClass.add(this.inputNode, 'ios');
+                  dojoClass.add(this.controlNode, 'ios');
                 }
 
                 // dojoProp.set(this._trueNode, "textContent", this.trueValue);
