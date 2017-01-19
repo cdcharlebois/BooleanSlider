@@ -23,11 +23,11 @@
         <property key="displayType" type="enumeration" required="true" defaultValue="android">
             <caption>Display As</caption>
             <category>Customization</category>
-            <description>Render switch as</description>
+            <description>If you choose "auto" the slider will render in the format native to the user's device (Mobile only).</description>
             <enumerationValues>
                 <enumerationValue key="android">Android</enumerationValue>
                 <enumerationValue key="ios">iOS</enumerationValue>
-                <!-- <enumerationValue key="auto">auto</enumerationValue> -->
+                <enumerationValue key="auto">auto (Mobile only)</enumerationValue>
             </enumerationValues>
         </property>
         <property key="trueValue" type="translatableString">
