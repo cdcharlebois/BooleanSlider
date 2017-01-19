@@ -2,7 +2,7 @@
 
 This is an implementation of a boolean slider using just HTML and CSS. It can render a toggle-switch as either native ios or android, based on the setting in the widget. On mobile, it leverages cordova to automatically set the rendering based on the target device.
 
-![Sliders](https://github.com/cdcharlebois/BooleanSlider/blob/master/assets/screenshots/Switches.PNG "Sliders")
+![Sliders](https://raw.githubusercontent.com/cdcharlebois/BooleanSlider/master/assets/screenshots/Switches.png "Sliders")
 
 ## Contributing
 
