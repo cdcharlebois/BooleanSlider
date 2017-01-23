@@ -62,7 +62,9 @@ define([
 
         _setupEvents: function () {
             logger.debug(this.id + "._setupEvents");
-            this.connect(this.controlNode, "click", function (e) {
+            var trigger = ((document.ontouchstart!==null) ? 'click' : 'touchstart');
+            this.connect(this.controlNode, trigger, function (e) {
+                e.preventDefault();
                 // save the data
                 if (this.editable){
                     this.inputNode.checked = !this.inputNode.checked;
