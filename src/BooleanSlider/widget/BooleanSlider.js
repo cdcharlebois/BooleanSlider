@@ -94,12 +94,12 @@ define([
                 dojoStyle.set(this.domNode, "display", "block");
                 //TODO: Add the classes based on this.displayType
                 if (this.displayType === 'auto'){
-                  if (device.platform.toLowerCase() === 'android') {
-                    this.displayType = 'android';
-                  }
-                  else {
-                    this.displayType = 'ios';
-                  }
+                  typeof device != 'undefined'?
+                    device.platform.toLowerCase() === 'android'?
+                      this.displayType = 'android'
+                    : this.displayType = 'ios'
+                  : this.displayType = 'android';
+
                 }
                 if (this.displayType === 'android'){
                   // android
